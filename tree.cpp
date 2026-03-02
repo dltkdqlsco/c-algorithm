@@ -22,7 +22,7 @@ struct Node {
 
 NodeRef createTree() {
   // shared_ptr을 만들 때 new를 직접 쓰는 대신 std::make_shared<T> 함수를
-  // 사용하는 것이 좋다. new를 사용하게 되면 객체와 제어 블록 할달을 따로해서 총
+  // 사용하는 것이 좋다. new를 사용하게 되면 객체와 제어 블록 할당을 따로해서 총
   // 2번의 메모리 할당이 일어난다. make_shared<T>는 객체와 제어 블록을 한 번에
   // 할당하여 메모리 할당 횟수를 줄이고 성능을 향상시킨다.
   NodeRef root = make_shared<Node>("R1 개발실");
